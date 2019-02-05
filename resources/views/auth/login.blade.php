@@ -37,8 +37,9 @@
                   Remember Password
                 </label>
               </div>
+              <button class="btn btn-primary btn-block" type="submit">Login</a>
             </div>
-            <button class="btn btn-primary btn-block" type="submit">Login</a>
+            
           </form>
           <div class="text-center">
             <a class="d-block small" href="{{route('password.request')}}">Forgot Password?</a>

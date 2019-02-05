@@ -21,6 +21,10 @@ Route::group(['middleware'=>['auth']], function(){
 			Route::get('/', function(){
 				return view('admin.pages.dashboard');
 			})->name('admin.home');
+
+			Route::prefix('user')->group(function(){
+				Route::get('/setting','UserSettingController@form')->name('admin.user.setting');
+			});
 		});
 });
 
@@ -29,4 +33,4 @@ Route::group(['middleware'=>['auth']], function(){
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+

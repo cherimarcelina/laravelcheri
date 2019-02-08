@@ -5,4 +5,10 @@
             <span>Dashboard</span>
           </a>
         </li>
-      </ul>
+         <li class="nav-item">
+          <a class="nav-link" href="{{route('admin.user')}}">
+            <i class="fas fa-fw fa-users"></i>
+            <span>USER</span>
+          </a>
+        </li>
+</ul>

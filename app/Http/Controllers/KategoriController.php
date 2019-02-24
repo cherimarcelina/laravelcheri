@@ -14,4 +14,14 @@ class KategoriController extends Controller
 
     	return view('admin.pages.kategori.daftar',['data'=>$data]);
     }
+
+    public function add()
+    {
+    	return view('admin.pages.kategori.add');
+    }
+
+    public function save(Request $req)
+    {
+    	return 'Fungsi Save';
+    }
 }

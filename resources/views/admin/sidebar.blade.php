@@ -1,4 +1,4 @@
-<ul class="sidebar navbar-nav">
+<ul class="sidebar navbar-nav sidebar-lightgrey bg-lightgrey">
         <li class="nav-item">
           <a class="nav-link" href="{{route('admin.home')}}">
             <i class="fas fa-fw fa-tachometer-alt"></i>

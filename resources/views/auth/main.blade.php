@@ -10,7 +10,7 @@
     <meta name="author" content="">
 
     <title>TOKOAPLIKASI- @yield('title')</title>
-    <link rel="icon" type="png/image" href="{{url('favicon2.png')}}">
+    <link rel="icon" type="gif/image" href="{{url('favicon4.gif')}}">
     <!-- Bootstrap core CSS-->
     <link href="{{ url('theme/vendor/bootstrap/css/bootstrap.min.css')}} " rel="stylesheet">
 

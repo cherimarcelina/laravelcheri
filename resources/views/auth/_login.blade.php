@@ -1,19 +1,19 @@
 @extends('layouts.app')
 
 @section('content')
-        <div class="container">
+        <div class="container _login-pink _bg-pink">
             <div class="row">
               <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
                   <div class="panel-heading">Login</div>
                     <div class="panel-body">
                       <form class="form-horizontal" method="POST" action="{{route('login')}}">
-                        {{ csrffield()}
+                        {{ csrf_field()}
                           <div class="form-group{{ $errors->has('email') ? 'has-error' : '' }}">
                             <label for="email" class="col-md-4 control-label">E-Mail Address</label>
 
                             <div class="col-mdv6">
-                                <input id="email" type="email" class="form-control" name="email" value="{{old('email') }}" required autofocus>
+                                <input id="email" type="email" class="form-control" name="email" value="{{old('email') }}" required autofsocus>
 
                                 @if ($errors->has('email'))
                                   <span class="help-block">

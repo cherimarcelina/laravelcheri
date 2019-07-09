@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand navbar-dark bg-dark static-top" >
 
       <a class="navbar-brand mr-1" href="{{route('admin.home')}}">
-      <img src="{{url('img/logo3.png')}}" width="50px">
+      <img src="{{url('img/logo4.gif')}}" width="80px">
       Administration</a>
 
       <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">

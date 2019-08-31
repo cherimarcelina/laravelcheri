@@ -3,18 +3,19 @@
 @section('content')
 <h1>Produk</h1>
 <hr>
+
 <!-- Baris TAmbah dan pencarian-->
 <div class="row">
 	<!-- Tombol Tambah -->
 	<div class="col-md-6 mb-3">
-		<a href="#" class="btn btn-primary">[+] Tambah</a>
+		<a href="{{ route('admin.produk.add') }}" class="btn btn-primary">[+] Tambah</a>
 	</div>
 
 	<!-- form pencarian -->
 	<div class="col-md-6 mb-3">
-		<form method="GET" action="{{route('admin.produk') }}">
+		<form method="GET" action="{{ route('admin.produk') }}">
 			<div class="input-group">
-				<input type="text" name="keyword" class="form-control" value="{{request ('keyword')}}">
+				<input type="text" name="keyword" class="form-control" value="{{ request('keyword') }}">
 				<div class="input-group-append">
 					<button type="submit" class="btn btn-primary">
 						Cari!
@@ -48,11 +49,14 @@
 	<!-- kolom tombol -->
 	<td>
 		<!-- tombol edit-->
-		<a href="#" class="btn btn-success btn-sm">
+		<a href="#" 
+		class="btn btn-success btn-sm">
 			<i class="fa fa-w fa-edit"></i>
 		</a>
+
 		<!-- tombol gambar-->
-		<a href="#" class="btn btn-info btn-sm">
+		<a href="#" 
+		class="btn btn-info btn-sm">
 			<i class="fa fa-w fa-edit"></i>
 		</a>
 
@@ -62,10 +66,7 @@
 		class="btn btn-danger btn-sm btn-trash">
 			<i class="fa fa-w fa-trash"></i>
 		</button>
-
-
 	</td>
-
 	</tr>
 		
 	@endforeach

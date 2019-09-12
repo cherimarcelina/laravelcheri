@@ -83,6 +83,7 @@
 							<option value="" {{ $val==""?'selected':'' }}>Pilih Akses Sebagai :</option>
 							<option value="operator" {{ $val=="operator"?'selected':'' }}>Operator</option>
 							<option value="admin" {{ $val=="admin"?'selected':'' }}>Administration</option>
+							<option value="asisten"{{ $val=="asisten"?'selected':''}}>Asisten Admin</option>
 						</select>
 						@if($errors->has('akses'))
 						<div class="invalid-feedback">{{ $errors->first('akses')}}</div>

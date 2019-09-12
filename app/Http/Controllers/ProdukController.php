@@ -28,6 +28,16 @@ class ProdukController extends Controller
     /*fungsi simpan/save*/
     public function save(Request $req)
     {
+        \Validator::make($req->all(),[
+
+            'kode'=>'required|between:3,100|unique:produk,kode_produk',
+            'nama_produk'=>'required|between:3,100',
+            'kategori'=>'required|numeric',
+            'harga'=>'required|numeric',
+            'stok'=>'required|numeric',
+            'gambar'=>'required|image',
+            ])->validate();
+
     	return 'Fungsi Save'; 
     }
 }

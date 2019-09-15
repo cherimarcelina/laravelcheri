@@ -38,6 +38,24 @@ class ProdukController extends Controller
             'gambar'=>'required|image',
             ])->validate();
 
-    	return 'Fungsi Save'; 
+    	// ganti nama file
+        $filename = rand(1,999).'_'.str_replace(' ', '', $req->gambar->getClientOriginalName());
+        // simpan file ke storage
+        $req->file('gambar')->storeAs('public/gambar-produk',$filename);
+
+        $result = new Produk;
+        $result->kode_produk = $req->kode;
+        $result->nama_produk = $req->nama_produk;
+        $result->id_kategori = $req->kategori;
+        $result->harga = $req->harga;
+        $result->stok = $req->stok;
+        $result->gambar_produk = $filename;
+
+        if($result->save()){
+            return redirect()->route('admin.produk')->with('result','success');
+        }else{
+            return back()->with('result','fail')->withInput();
+        }
     }
 }
+

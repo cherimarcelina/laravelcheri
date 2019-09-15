@@ -61,7 +61,7 @@
 	<!-- kolom tombol -->
 	<td>
 		<!-- tombol edit-->
-		<a href="#" 
+		<a href="{{ route('admin.produk.edit',['id'=>$dt->id])}}" 
 		class="btn btn-success btn-sm">
 			<i class="fa fa-w fa-edit"></i>
 		</a>
